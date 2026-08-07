@@ -2,9 +2,8 @@ data "aws_caller_identity" "current" {}
 
 data "aws_region" "current" {}
 
-
 locals {
-  lambda_function_arn = "arn:aws:lambda:${data.aws_region.current.name}:${data.aws_caller_identity.current.account_id}:function:${var.lambda_function_name}"
+  lambda_function_arn = "arn:aws:lambda:${data.aws_region.current.region}:${data.aws_caller_identity.current.account_id}:function:${var.lambda_function_name}"
 }
 
 # Lambda IAM role
