@@ -7,19 +7,19 @@ variable "sites" {
   }))
 
   default = [
-  {
-    name = "google"
-    url  = "https://google.com"
-  },
-  {
-    name = "softserve"
-    url  = "https://softserveinc.com"
-  },
-  {
-    name = "coinops"
-    url  = "https://coinops-d.pp.ua"
-  }
-]
+    {
+      name = "google"
+      url  = "https://google.com"
+    },
+    {
+      name = "github"
+      url  = "https://github.com"
+    },
+    {
+      name = "coinops"
+      url  = "https://coinops-d.pp.ua"
+    }
+  ]
 
   validation {
     condition     = length(var.sites) > 0
