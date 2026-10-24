@@ -6,21 +6,6 @@ variable "sites" {
     url  = string
   }))
 
-  default = [
-    {
-      name = "google"
-      url  = "https://google.com"
-    },
-    {
-      name = "github"
-      url  = "https://github.com"
-    },
-    {
-      name = "coinops"
-      url  = "https://coinops-d.pp.ua"
-    }
-  ]
-
   validation {
     condition     = length(var.sites) > 0
     error_message = "At least one site must be configured."
